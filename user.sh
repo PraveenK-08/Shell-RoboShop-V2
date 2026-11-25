@@ -1,7 +1,7 @@
 appname=user
 source ./common.sh
 
-userSetup
+appSetup
 nodejs
 reload
 enable
