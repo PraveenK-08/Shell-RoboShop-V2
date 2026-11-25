@@ -30,7 +30,7 @@ validate $? "Moving Shipping Jar file"
 dnf install mysql -y  &>> $logs_file
 validate $? "Installing mysql client"
 
-count=$(mysql -h mysql.$domain_name -uroot  -pRoboShop@1 -D cities -N -s -e "SELECT COUNT(*) FROM cities"; 2>> $logs_file) 
+count=$(mysql -h mysql.$domain_name -uroot  -pRoboShop@1 -D cities -N -s -e "SELECT COUNT(*) FROM cities"; &>> $logs_file) 
 
 if [ $count -eq 0 ] || [ -z $count ]; then
     mysql -h mysql.$domain_name -uroot -pRoboShop@1 < /app/db/master-data.sql &>> $logs_file
