@@ -6,6 +6,7 @@ user_id=$(id -u)
 logs_folder="/var/log/Shell-RoboShop-V1"
 logs_file="$logs_folder/$0"
 script_path=$(dirname $(realpath ${0}))
+domain_name=teram.store
 
 userCheck() {
     if [ $user_id -ne 0 ]; then
