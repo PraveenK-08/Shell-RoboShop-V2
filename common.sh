@@ -101,10 +101,10 @@ appSetup() {
     unzip /tmp/$appname.zip  &>> $logs_file
     validate $? "unzip the application file"
 
-    sed -i "s/domainName/$domain_name/g" "$script_path/$appname.service"
+    sed -i "s/domainName/$domain_name/g" "${script_path}/${appname}.service"
     validate $? "configuration file update "  
 
-    cp "$script_path/$appname.service" /etc/systemd/system/$appname.service
+    cp "$script_path/$appname.service" "/etc/systemd/system/${appname}.service"
     validate $? "service file copied"  
 }
 
