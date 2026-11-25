@@ -1,6 +1,5 @@
 appname=catalogue
 source ./common.sh
-source ./catalogue.service
 
 userCheck
 startTime
