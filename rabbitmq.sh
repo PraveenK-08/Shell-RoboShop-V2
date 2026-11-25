@@ -26,4 +26,4 @@ fi
 rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*"  &>> $logs_file
 validate $? "set permissions to rabbitmq user "
 
-endTme
+endTime
