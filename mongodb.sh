@@ -1,4 +1,4 @@
-appname=mongodb
+appname=mongod
 source ./common.sh
 
 userCheck
@@ -10,7 +10,7 @@ echo "installation started ========"
 dnf install mongodb-org -y  &>> $logs_file
 validate $? "Installing mongodb"
 
-enable 
+enable
 start 
 
 sed -i 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf &>> $logs_file

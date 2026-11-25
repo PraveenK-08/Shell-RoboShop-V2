@@ -38,16 +38,16 @@ endTime() {
 
 enable() {
     systemctl enable $appname &>> $logs_file
-    validate $? "package enabled  "
+    validate $? "package enabled "
 }
 
-start(){
-systemctl start $appname &>> $logs_file
-validate $? "package started "
+start() {
+    systemctl start $appname &>> $logs_file
+    validate $? "package started "
 }
 
-restart(){
-systemctl restart $appname &>> $logs_file
-validate $? "package restarted "
+restart() {
+    systemctl restart $appname &>> $logs_file
+    validate $? "package restarted "
 
 }
