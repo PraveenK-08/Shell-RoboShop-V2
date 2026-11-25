@@ -107,6 +107,6 @@ appSetup() {
     validate $? "configuration file update "  
 
     cp "$script_path/$appname.service" "/etc/systemd/system/${appname}.service"
-    validate $? "service file copied"  
+    validate $? "service file copied"
 }
 
